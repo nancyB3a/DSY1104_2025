@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/miCss.css">
+    <!--Link par Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <title>Super Héroes</title>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logoNav.png" alt="Logo" width="60">
+                Superheroes
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#marvel">Marvel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#dc">DC Comics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Donar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Fin de Navbar-->
+    <!--Carrusel-->
+    <!--el atributo data-bs-ride="carousel" es el que da el autoplay-->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/intro-bg.jpg" class="imgCarousel" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/s_batman.jpg" class="imgCarousel" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/s_capitanamerica.jpg" class="imgCarousel" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/s_deadpool.jpg" class="imgCarousel" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/s_flash.jpg" class="imgCarousel" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/s_hawkeye.jpg" class="imgCarousel" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/s_hulk.jpg" class="imgCarousel" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/s_ironman.jpg" class="imgCarousel" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/s_mujermaravilla.jpg" class="imgCarousel" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/s_superman.jpg" class="imgCarousel" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/s_thor.jpg" class="imgCarousel" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/s_viudanegra.jpg" class="imgCarousel" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!--Fin Carrusel-->
+    <!--sección Marvel-->
+    <a name="marvel"></a>
+    <hr class="rounded mb-3">
+    <div class="secciones">
+        <br>
+        <h1>Marvel</h1>
+        <br>
+        <hr class="rounded mb-3">
+        <div class="card" style="width: 18rem;">
+            <img src="img/s_ironman.jpg" class="card-img-top" alt="IonMan">
+            <div class="card-body">
+                <h5 class="card-title">Iron Man</h5>
+                <p class="card-text">#Team Stark</p>
+                <a href="#" class="btn btn-primary">Mas Detalles</a>
+            </div>
+        </div>
+    </div>
+    <!--Fin sección Marvel-->
+    <!--sección DC-->
+    <a name="dc"></a>
+    <hr class="rounded mb-3">
+    <div class="secciones">
+        <br>
+        <h1>DC Comics</h1>
+        <br>
+        <hr class="rounded mb-3">
+        <div class="card" style="width: 18rem;">
+            <img src="img/s_superman.jpg" class="card-img-top" alt="Superman">
+            <div class="card-body">
+                <h5 class="card-title">Superman</h5>
+                <p class="card-text">#Team DC Comics</p>
+                <a href="#" class="btn btn-primary">Mas Detalles</a>
+            </div>
+        </div>
+    </div>
+    <!--Fin sección DC-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
