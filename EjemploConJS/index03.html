@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Ejemplo con JQuery</title>
+    <!--Inicio script-->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#error").hide();
+            $("#errorNombre").hide();
+            $("#nombre").focusout(function(){
+                if($("#nombre").val().trim().length ==0){
+                    mensaje = "El nombre está en blanco";
+                    $("#errorNombre").html(mensaje);
+                    $("#errorNombre").show();
+                }
+            });
+            $("#formulario").submit(function(){
+                msg = "";
+                if($("#nombre").val().trim().length ==0){
+                    msg = "El nombre está en blanco";
+                    $("#errorNombre").html(msg);
+                    $("#errorNombre").show();
+                }
+                if($("#email").val().trim().length ==0){
+                    msg = msg + " El email está en blanco"
+                }
+                if(msg != ""){
+                    $("#error").html(msg);
+                    $("#error").show();
+                    event.preventDefault();
+                }
+
+            });
+        });
+    </script>
+    <!--Fin script-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form action="otraPage.html" method="post" id="formulario">
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" class="form-control">
+                    </div>
+                    <div class="col mt-4">
+                        <div id="errorNombre" class="alert alert-danger" role="alert"></div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" id="email" class="form-control">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
+                    <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+                    <br>
+                    <div id="error" class="alert alert-danger mt-3" role="alert"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
